@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+}
+
+.left_pane {
+    flex: 1;
+    background-color: rgb(218, 188, 247);
+    padding: 10px;
+}
+
+.right_pane{
+    flex: 2;
+    position: relative;
+    background-color: rgb(243, 217, 183);
+}
+
+
+.inbox_people {
+    background-color: rgb(120, 150, 151);
+    color: #fff;
+    padding: 5px;
+}
+
+.inbox_people > h4 {
+    border: 1px solid rgba(103, 112, 95, 0.897);
+    background-color: rgba(103, 112, 95, 0.897);
+    padding: 3px;
+    border-radius: 5px
+}
+
+.inbox_messages {
+    height: 82vh;
+    overflow: overlay;
+}
+
+.message_form {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: row;
+    left: 0;
+    right: 0;
+}
+
+.message_form > .message_from_input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.outgoing_message {
+    background: beige;
+    padding: 5px;
+    border-radius: 6px;
+    margin: 5px;
+	margin-right: 25px;
+}
+
+.incoming_message{
+    background: rgb(156, 206, 122);
+    padding: 5px;
+    border-radius: 6px;
+    text-align: right;
+    margin: 5px;
+	margin-right: 25px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket IO Tutorial</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left_pane">
+            <div class="inbox">
+                <div class="inbox_people">
+                    <h4 onclick="start()">Active Users</h4>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="right_pane">
+            <div class="inbox_messages">
+                <div class="messages_history"></div>
+                <div class="fallback"></div>
+            </div>
+            <form class="message_form">
+                <input type="text" class="message_from_input" >
+                <button class="meesage_from_button" type="submit">
+                    Enter
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="./sails_websocket.js"></script>
+	<script>
+		function start(){
+		 io.socket.get('http://127.0.0.1:1337/api/v1/message', {mess: 'hhh'});
+		
+		}
+	</script>
+		
+	
+</body>
+</html>
